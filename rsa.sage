@@ -2,7 +2,7 @@ from sage.crypto.util import ascii_to_bin, bin_to_ascii
 
 DEBUG = 0
 
-class Rsa:
+class RSA:
     def generate_key(self, bits):
         self.log("Generation of {bits}-bits keys".format(bits=bits))
 
@@ -100,7 +100,7 @@ down a large rabbit-hole under the hedge.
 block_size = 128
 key_bits = 2048
 
-rsa = Rsa()
+rsa = RSA()
 rsa.generate_key(key_bits)
 encoded = rsa.encode(input2, block_size)
 decoded = rsa.decode(encoded, block_size)
